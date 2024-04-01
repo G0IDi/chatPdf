@@ -12,6 +12,18 @@ from langchain.callbacks import get_openai_callback
 
 #import pickle5 as pickle
 #from pathlib import Path
+def css_local(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+css_local("css/style.css")
+
+
+#import pickle5 as pickle
+#from pathlib import Path
+
+col1, col2, col3 = st.columns(3)
+with col2:
+    st.image("logoSena.png",width=200)
 
 st.title('Chatea con tu PDF 💬')
 ke = st.text_input('Ingresa tu Clave')
